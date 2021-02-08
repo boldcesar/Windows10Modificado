@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DefaultAssociations>
+  <Association Identifier=".264" ProgId="mplayerc64.264" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".3g2" ProgId="mplayerc64.3g2" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".3gp" ProgId="mplayerc64.3gp" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".3gp2" ProgId="mplayerc64.3gp2" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".3gpp" ProgId="mplayerc64.3gpp" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".aac" ProgId="WMP11.AssocFile.ADTS" ApplicationName="Windows Media Player" />
+  <Association Identifier=".ac3" ProgId="KLCP.WMP.ac3" ApplicationName="Windows Media Player" />
+  <Association Identifier=".adts" ProgId="WMP11.AssocFile.ADTS" ApplicationName="Windows Media Player" />
+  <Association Identifier=".aif" ProgId="WMP11.AssocFile.AIFF" ApplicationName="Windows Media Player" />
+  <Association Identifier=".aifc" ProgId="WMP11.AssocFile.AIFF" ApplicationName="Windows Media Player" />
+  <Association Identifier=".aiff" ProgId="WMP11.AssocFile.AIFF" ApplicationName="Windows Media Player" />
+  <Association Identifier=".alac" ProgId="KLCP.WMP.alac" ApplicationName="Windows Media Player" />
+  <Association Identifier=".amr" ProgId="KLCP.WMP.amr" ApplicationName="Windows Media Player" />
+  <Association Identifier=".amv" ProgId="mplayerc64.amv" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".aob" ProgId="KLCP.WMP.aob" ApplicationName="Windows Media Player" />
+  <Association Identifier=".ape" ProgId="KLCP.WMP.ape" ApplicationName="Windows Media Player" />
+  <Association Identifier=".asf" ProgId="mplayerc64.asf" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".asx" ProgId="mplayerc64.asx" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".au" ProgId="WMP11.AssocFile.AU" ApplicationName="Windows Media Player" />
+  <Association Identifier=".avi" ProgId="mplayerc64.avi" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".avs" ProgId="mplayerc64.avs" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".bdmv" ProgId="mplayerc64.bdmv" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".bik" ProgId="mplayerc64.bik" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".caf" ProgId="KLCP.WMP.caf" ApplicationName="Windows Media Player" />
+  <Association Identifier=".cda" ProgId="WMP11.AssocFile.CDA" ApplicationName="Windows Media Player" />
+  <Association Identifier=".cfg" ProgId="Applications\notepad.exe" ApplicationName="Bloco de notas" />
+  <Association Identifier=".dav" ProgId="mplayerc64.dav" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".dff" ProgId="KLCP.WMP.dff" ApplicationName="Windows Media Player" />
+  <Association Identifier=".divx" ProgId="mplayerc64.divx" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".dsf" ProgId="KLCP.WMP.dsf" ApplicationName="Windows Media Player" />
+  <Association Identifier=".dts" ProgId="KLCP.WMP.dts" ApplicationName="Windows Media Player" />
+  <Association Identifier=".dv" ProgId="mplayerc64.dv" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".evo" ProgId="mplayerc64.evo" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".f4v" ProgId="mplayerc64.f4v" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".flac" ProgId="WMP11.AssocFile.FLAC" ApplicationName="Windows Media Player" />
+  <Association Identifier=".flv" ProgId="mplayerc64.flv" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".hdmov" ProgId="mplayerc64.hdmov" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".htm" ProgId="BraveHTML" ApplicationName="Brave" />
+  <Association Identifier=".html" ProgId="BraveHTML" ApplicationName="Brave" />
+  <Association Identifier=".ifo" ProgId="mplayerc64.ifo" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".inf" ProgId="inffile" ApplicationName="Bloco de notas" />
+  <Association Identifier=".ini" ProgId="inifile" ApplicationName="Bloco de notas" />
+  <Association Identifier=".IVF" ProgId="mplayerc64.ivf" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".log" ProgId="txtfile" ApplicationName="Bloco de notas" />
+  <Association Identifier=".m1v" ProgId="mplayerc64.m1v" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".m2p" ProgId="mplayerc64.m2p" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".m2t" ProgId="mplayerc64.m2t" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".m2ts" ProgId="mplayerc64.m2ts" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".m2v" ProgId="mplayerc64.m2v" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".m3u" ProgId="WMP11.AssocFile.m3u" ApplicationName="Windows Media Player" />
+  <Association Identifier=".m4a" ProgId="WMP11.AssocFile.M4A" ApplicationName="Windows Media Player" />
+  <Association Identifier=".m4v" ProgId="mplayerc64.m4v" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".mid" ProgId="WMP11.AssocFile.MIDI" ApplicationName="Windows Media Player" />
+  <Association Identifier=".midi" ProgId="WMP11.AssocFile.MIDI" ApplicationName="Windows Media Player" />
+  <Association Identifier=".mk3d" ProgId="mplayerc64.mk3d" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".mka" ProgId="WMP11.AssocFile.MKA" ApplicationName="Windows Media Player" />
+  <Association Identifier=".mkv" ProgId="mplayerc64.mkv" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".mlp" ProgId="KLCP.WMP.mlp" ApplicationName="Windows Media Player" />
+  <Association Identifier=".mov" ProgId="mplayerc64.mov" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".MP2" ProgId="WMP11.AssocFile.MP3" ApplicationName="Windows Media Player" />
+  <Association Identifier=".mp2v" ProgId="mplayerc64.mp2v" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".mp3" ProgId="WMP11.AssocFile.MP3" ApplicationName="Windows Media Player" />
+  <Association Identifier=".mp4" ProgId="mplayerc64.mp4" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".mp4v" ProgId="mplayerc64.mp4v" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".mpa" ProgId="WMP11.AssocFile.MPEG" ApplicationName="Windows Media Player" />
+  <Association Identifier=".mpc" ProgId="KLCP.WMP.mpc" ApplicationName="Windows Media Player" />
+  <Association Identifier=".mpcpl" ProgId="mplayerc64.mpcpl" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".MPE" ProgId="mplayerc64.mpe" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".mpeg" ProgId="mplayerc64.mpeg" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".mpg" ProgId="mplayerc64.mpg" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".mpl" ProgId="KLCP.WMP.mpl" ApplicationName="Windows Media Player" />
+  <Association Identifier=".mpls" ProgId="mplayerc64.mpls" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".mpv2" ProgId="mplayerc64.mpv2" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".mpv4" ProgId="mplayerc64.mpv4" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".mts" ProgId="mplayerc64.mts" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".mxf" ProgId="mplayerc64.mxf" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".oga" ProgId="KLCP.WMP.oga" ApplicationName="Windows Media Player" />
+  <Association Identifier=".ogg" ProgId="mplayerc64.ogg" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".ogm" ProgId="mplayerc64.ogm" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".ogv" ProgId="mplayerc64.ogv" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".opus" ProgId="KLCP.WMP.opus" ApplicationName="Windows Media Player" />
+  <Association Identifier=".pdf" ProgId="AcroExch.Document.DC" ApplicationName="Adobe Acrobat Reader DC" />
+  <Association Identifier=".ps1" ProgId="Microsoft.PowerShellScript.1" ApplicationName="Bloco de notas" />
+  <Association Identifier=".psd1" ProgId="Microsoft.PowerShellData.1" ApplicationName="Bloco de notas" />
+  <Association Identifier=".psm1" ProgId="Microsoft.PowerShellModule.1" ApplicationName="Bloco de notas" />
+  <Association Identifier=".ra" ProgId="KLCP.WMP.ra" ApplicationName="Windows Media Player" />
+  <Association Identifier=".rar" ProgId="WinRAR" ApplicationName="WinRAR archiver" />
+  <Association Identifier=".rec" ProgId="mplayerc64.rec" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".rm" ProgId="mplayerc64.rm" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".rmi" ProgId="WMP11.AssocFile.MIDI" ApplicationName="Windows Media Player" />
+  <Association Identifier=".rmvb" ProgId="mplayerc64.rmvb" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".scp" ProgId="txtfile" ApplicationName="Bloco de notas" />
+  <Association Identifier=".smk" ProgId="mplayerc64.smk" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".snd" ProgId="WMP11.AssocFile.AU" ApplicationName="Windows Media Player" />
+  <Association Identifier=".spx" ProgId="KLCP.WMP.spx" ApplicationName="Windows Media Player" />
+  <Association Identifier=".ssif" ProgId="mplayerc64.ssif" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".svg" ProgId="AppXde74bfzw9j31bzhcvsrxsyjnhhbq66cs" ApplicationName="Microsoft Edge" />
+  <Association Identifier=".tif" ProgId="PhotoViewer.FileAssoc.Tiff" ApplicationName="Visualizador de Fotos do Windows" />
+  <Association Identifier=".tiff" ProgId="PhotoViewer.FileAssoc.Tiff" ApplicationName="Visualizador de Fotos do Windows" />
+  <Association Identifier=".tp" ProgId="mplayerc64.tp" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".tps" ProgId="mplayerc64.tps" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".trp" ProgId="mplayerc64.trp" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".TS" ProgId="mplayerc64.ts" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".tta" ProgId="KLCP.WMP.tta" ApplicationName="Windows Media Player" />
+  <Association Identifier=".TTS" ProgId="WMP11.AssocFile.TTS" ApplicationName="Windows Media Player" />
+  <Association Identifier=".txt" ProgId="Applications\notepad++.exe" ApplicationName="Notepad++ : a free (GNU) source code editor" />
+  <Association Identifier=".url" ProgId="IE.AssocFile.URL" />
+  <Association Identifier=".video" ProgId="mplayerc64.video" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".vob" ProgId="mplayerc64.vob" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".wav" ProgId="WMP11.AssocFile.WAV" ApplicationName="Windows Media Player" />
+  <Association Identifier=".wax" ProgId="WMP11.AssocFile.WAX" ApplicationName="Windows Media Player" />
+  <Association Identifier=".webm" ProgId="mplayerc64.webm" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".wm" ProgId="WMP11.AssocFile.ASF" ApplicationName="Windows Media Player" />
+  <Association Identifier=".wma" ProgId="WMP11.AssocFile.WMA" ApplicationName="Windows Media Player" />
+  <Association Identifier=".wmv" ProgId="mplayerc64.wmv" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".wmx" ProgId="WMP11.AssocFile.ASX" ApplicationName="Windows Media Player" />
+  <Association Identifier=".WPL" ProgId="WMP11.AssocFile.WPL" ApplicationName="Windows Media Player" />
+  <Association Identifier=".WTV" ProgId="mplayerc64.wtv" ApplicationName="MPC-HC (x64)" />
+  <Association Identifier=".wtx" ProgId="txtfile" ApplicationName="Bloco de notas" />
+  <Association Identifier=".wv" ProgId="KLCP.WMP.wv" ApplicationName="Windows Media Player" />
+  <Association Identifier=".wvx" ProgId="WMP11.AssocFile.WVX" ApplicationName="Windows Media Player" />
+  <Association Identifier="http" ProgId="BraveHTML" ApplicationName="Brave" />
+  <Association Identifier="https" ProgId="BraveHTML" ApplicationName="Brave" />
+  <Association Identifier="microsoft-edge" ProgId="AppX7rm9drdg8sk7vqndwj3sdjw11x96jc0y" ApplicationName="Microsoft Edge" />
+  <Association Identifier="microsoft-edge-holographic" ProgId="AppX3xxs313wwkfjhythsb8q46xdsq8d2cvv" ApplicationName="Microsoft Edge" />
+  <Association Identifier="ms-xbl-3d8b930f" ProgId="AppXdn5b0j699ka5fqvrr3pgjad0evqarm6d" ApplicationName="Microsoft Edge" />
+  <Association Identifier="read" ProgId="AppXe862j7twqs4aww05211jaakwxyfjx4da" ApplicationName="Microsoft Edge" />
+</DefaultAssociations>
