@@ -10,7 +10,7 @@ Readme.txt contém todas as modificações no windows pelo script.
 
 
 Minhas adições:
-#1 Caixa de texto perguntando se quer "Sim" ou "Não"
+#1 Caixa de diálogo perguntando se quer "Sim" ou "Não"
 -Desinstalar OneDrive.
 -Instalar .Net FrameWork 3.5.
 -Instalar Acrobat Reader.
