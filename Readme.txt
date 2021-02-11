@@ -24,7 +24,31 @@ O script roda automaticamente o software OO&Shutp e faz download do Windows Upda
 Em razão do script modificar várias configurações do windows, então se o usuário já tiver personalizado o Windows é capaz que perca algumas de suas configurações pessoais!!!
 
 #### O script executa uma série de prompts perguntando se o usário deseja instalar ou habilitar alguns programas e funções, então é sugerido que o usuário rode o script com calma para não instalar, desinstalar ou desabilitar alguma coisa que não seja de sua preferência!!!!
-		
+	
+	Minhas adições:
+#1 Caixa de diálogo perguntando se quer "Sim" ou "Não"
+-Desinstalar OneDrive.
+-Instalar .Net FrameWork 3.5.
+-Instalar Acrobat Reader.
+-Instalar K-lite Codec Pack.
+-Instalar Navegador Brave.
+-Instalar Navegador Google Chrome.
+-Instalar HWMonitor.
+-Instalar MSI AfterBurner.
+-Habilitar Plano de Energia de Alta Performance.
+-Instalar Driver de Controle XBOX 360.
+-Habilitar Modo Escuto (Dark Mode).
+-Mudar para o modo de visualização de imagens clássico.
+-Remover ícones da Barra de Tarefas.
+-Remover blocos do Menu Iniciar.
+
+#2 Baixa o Windows Update Blocker.
+
+#3 Cria uma pasta na área de trabalho chamada "OOShutUp-UpdateBlocker"
+onde ficaram contidos o OOShutp e o Windows Update Blocker.
+
+#4 Ao final do script apaga automaticamente todos os executáveis utilizados
+para a instalação dos softwares instalados.
 		
 		
 		### Bloatware removed by the script! ####
