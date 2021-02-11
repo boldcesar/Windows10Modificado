@@ -143,13 +143,14 @@ $tweaks = @(
 	###Final tweaks###
 	"EnableDisableDarkMode",	
 	"DelayUpdates",
-	"ShutUpantispy",	
+	"ShutUpantispyUpdateBlocker",	
 	"InstallPDFPrinter",
 	"DeleteInstalledSoftwares",
 	"SetPhotoViewerAssociation",	
 	
 	"UnpinStartMenuTiles",
-	"UnpinTaskbarIcons",    		
+	"UnpinTaskbarIcons",
+	
 	"RebootPC"	
 	
 	)
@@ -169,13 +170,36 @@ Function DelayUpdates {
 	If (!(Get-ItemProperty $UpdatesPath  DeferQualityUpdatesPeriodInDays)) { New-ItemProperty -Path $UpdatesPath -Name "ActiveHoursStart" -Type DWord -Value 8 }
 	Set-ItemProperty -Path $UpdatesPath -Name "ActiveHoursStart" -Type DWord -Value 8
 }
-Function ShutUpantispy {
+Function ShutUpantispyUpdateBlocker {
     
-	Write-Output "Executando O&O Shutup com opções recomendadas..."
+	New-Item -Path "$env:USERPROFILE\Desktop\" -Name "OOShutUp-UpdateBlocker" -ItemType "directory" | Out-Null
+	
+	Write-Output "Running O&O Shutup with recommended settings..."
 	Import-Module BitsTransfer
-	Start-BitsTransfer -Source "https://raw.githubusercontent.com/boldcesar/WindowsDebloater-Modified-/main/ooshutup10.cfg" -Destination ooshutup10.cfg
-	Start-BitsTransfer -Source "https://dl5.oo-software.com/files/ooshutup10/OOSU10.exe" -Destination OOSU10.exe
-	./OOSU10.exe ooshutup10.cfg /quiet
+	Start-BitsTransfer -Source "https://raw.githubusercontent.com/boldcesar/WindowsDebloater-Modified-/main/ooshutup10.cfg" -Destination $env:USERPROFILE\Desktop\OOShutUp-UpdateBlocker\ooshutup10.cfg
+	
+	Start-BitsTransfer -Source "https://dl5.oo-software.com/files/ooshutup10/OOSU10.exe" -Destination $env:USERPROFILE\Desktop\OOShutUp-UpdateBlocker\OOSU10.exe
+	
+	./OOSU10.exe ooshutup10.cfg /quiet |Out-Null
+	
+	$url = "https://www.sordum.org/files/download/windows-update-blocker/Wub.zip"
+        $output = "$env:USERPROFILE\Desktop\OOShutUp-UpdateBlocker\Wub.zip"
+		
+ Write-Host "Downloading Windows Update Blocker..."
+(New-Object System.Net.WebClient).DownloadFile($url, $output) | Out-File
+
+$zipfile = "$env:USERPROFILE\Desktop\OOShutUp-UpdateBlocker\Wub.zip"
+$outpath = "$env:USERPROFILE\Desktop\OOShutUp-UpdateBlocker\"
+$unziped = "$env:USERPROFILE\Desktop\OOShutUp-UpdateBlocker\Wub\"
+
+param([string]$zipfile, [string]$outpath)
+[System.IO.Compression.ZipFile]::ExtractToDirectory($zipfile, $outpath) | Out-File
+Write-Host "Extracting Wub..."
+Start-Process $unziped -quiet | Out-File
+
+Write-Host "Deleting unnecessary files..."
+Remove-item -literalpath "$env:USERPROFILE\Desktop\OOShutUp-UpdateBlocker\Wub.zip" -force | Out-Null
+
 }
 
 ##Essential softwares
@@ -186,6 +210,7 @@ function Chocolatey
 	choco install chocolatey-core.extension -y
 	choco install notepadplusplus -y --force
 	choco install winrar -y --force
+	Write-Host "Notepadplusplus and Winrar installed!"
 	
 }
 
@@ -196,34 +221,34 @@ $Button = [Windows.MessageBoxButton]::YesNoCancel
 $ErrorIco = [Windows.MessageBoxImage]::Error
 $Warn = [Windows.MessageBoxImage]::Warning
 
-$InstallNET = "Instalar .NET 3.5?"
-$DarkMode = "Habilitar Dark Mode?"
-$PowerPlan = "Habilitar Plano de energia de alta performance?"
-$PhotoViewer = "Mudar para o modo clássico de visualização de imagens?"
-$Brave = "Instalar Brave Browser?"
-$ABurner = "Instalar MSIAfterburner?"
-$Monitor = "Instalar HWMonitor?"
-$Adobe = "Instalar Adobe Reader?"
-$Klite = "Instakar K-lite Codec Pack Standard/MPC?"
-$Chrome = "Instalar Google Chrome?"
-$Controllerdriver = "Instalar Driver do Controle Xbox 360?"
-$NoOneDrive = "Desinstalar OneDrive?"
-$UnpinStart = "Remover ícones/Blocos do Menu Iniciar?"
-$UnpinTaskBar = "Remover ícones da Barra de Tarefas?"
-$Reboot = "Reiniciar o PC?"
+$InstallNET = "Do you want to install .NET 3.5?"
+$DarkMode = "Do you want to enable Dark Mode?"
+$PowerPlan = "Do you want to enable High Performance Power Plan?"
+$PhotoViewer = "Do you want to change to Windows Classic Photo Viewer?"
+$Brave = "Do you want to install Brave Browser?"
+$ABurner = "Do you want to install MSIAfterburner?"
+$Monitor = "Do you want to install HWMonitor?"
+$Adobe = "Do you want to install Adobe Reader?"
+$Klite = "Do you want to install K-lite Codec Pack Standard/MPC?"
+$Chrome = "Do you want to install Google Chrome?"
+$Controllerdriver = "Do you want to install Driver do Controle Xbox 360?"
+$NoOneDrive = "Do you want to uninstall OneDrive?"
+$UnpinStart = "Do you want to remove tiles from Start Menu?"
+$UnpinTaskBar = "Do you want to remove icons from TaskBar?"
+$Reboot = "Reboot PC?"
 
 #Prompt asking if you want to install .NET
 function NetFrameWork {
 do {
-$PromptNET = [Windows.MessageBox]::Show($InstallNET, "Install .Net", $Button, $Warn)
+$PromptNET = [Windows.MessageBox]::Show($InstallNET, "Install .Net 3.5", $Button, $Warn)
 Switch ($PromptNET) {
 Yes {
-Write-Host "Iniciando instalação do .NET 3.5..."
+Write-Host "Initializing .NET 3.5 Installation..."
 DISM /Online /Enable-Feature /FeatureName:NetFx3 /All
-Write-Host ".NET 3.5 processo conluído!"
+Write-Host ".NET 3.5 Just Finished!"
 }
 No {
-Write-Host "Pulando .NET."
+Write-Host "Skipping .NET."
 }
 }
 }
@@ -237,14 +262,14 @@ function Adobe {
 						$PromptAdobe = [Windows.MessageBox]::Show($Adobe, "Adobe", $Button, $Warn)
 		Switch ($PromptAdobe) {
             Yes {
-                Write-Host "Baixando e instalando Adobe..."
+                Write-Host "Downloading and installing Adobe..."
 				$ProgressPreference = 'SilentlyContinue'
                 Invoke-WebRequest -Uri "https://admdownload.adobe.com/bin/live/readerdc_br_xa_crd_install.exe" -OutFile $env:USERPROFILE\Downloads\readerdc_br_xa_crd_install.exe
 		~/Downloads/readerdc_br_xa_crd_install.exe -silent -install | Out-Null
-                Write-Host "Adobe processo concluído!"
+                Write-Host "Adobe Just Finished!"
             }
             No {
-                Write-Host "Pulando Adobe."
+                Write-Host "Skipping Adobe."
             }
 			}
 			
@@ -262,13 +287,13 @@ Function InstallKliteCodec {
   
     {
     Yes { 
-	Write-Host "Baixando e instalando K-Lite Codec Pack Standard..."
+	Write-Host "Downloading and installing K-Lite Codec Pack Standard..."
 	$ProgressPreference = 'SilentlyContinue'
 		Invoke-WebRequest -Uri "https://files3.codecguide.com/K-Lite_Codec_Pack_1595_Standard.exe" -OutFile $env:USERPROFILE\Downloads\K-Lite_Codec_Pack_1595_Standard.exe
 		~/Downloads/K-Lite_Codec_Pack_1595_Standard.exe -silent -install | Out-Null
-		Write-Host "K-Lite Codec Pack Standard processo concluído!"
+		Write-Host "K-Lite Codec Pack Standard Just Finished!"
 	}
-    No { Write-Host "Pulando K-Lite Codec Pack."
+    No { Write-Host "Skipping K-Lite Codec Pack."
 	}
     
     }
@@ -283,15 +308,15 @@ function HWMonitor {
 		$PromptMonitor = [Windows.MessageBox]::Show($Monitor, "HWMonitor", $Button, $Warn)
 		Switch ($PromptMonitor) {
             Yes {
-           Write-Host "Baixando e instalando HWMonitor..."
+           Write-Host "Downloading and installing HWMonitor..."
 	$ProgressPreference = 'SilentlyContinue'
                 Invoke-WebRequest -Uri "https://download.cpuid.com/hwmonitor/hwmonitor_1.43.exe" -OutFile $env:USERPROFILE\Downloads\hwmonitor_1.43.exe
 		~/Downloads/hwmonitor_1.43.exe -silent -install | Out-Null
 		 		
-                Write-Host "HWMonitor processo concluído!"
+                Write-Host "HWMonitor Just Finished!"
             }
             No {
-                Write-Host "Pulando HWMonitor."
+                Write-Host "Skipping HWMonitor."
             }
 			}			
 			}						        
@@ -305,16 +330,16 @@ function Chrome {
 						$PromptChrome = [Windows.MessageBox]::Show($Chrome, "Google Chrome", $Button, $Warn)
 		Switch ($PromptChrome) {
             Yes {
-                Write-Host "Baixando e instalando Google Chrome..."
+                Write-Host "Downloading and installing Google Chrome..."
 				$ProgressPreference = 'SilentlyContinue'
                 Invoke-WebRequest -Uri "https://dl.google.com/tag/s/appguid%3D%7B8A69D345-D564-463C-AFF1-A69D9E530F96%7D%26iid%3D%7B9E2510A4-FD40-7250-3830-47B1F6A88851%7D%26lang%3Dpt-BR%26browser%3D4%26usagestats%3D0%26appname%3DGoogle%2520Chrome%26needsadmin%3Dprefers%26ap%3Dx64-stable-statsdef_1%26installdataindex%3Dempty/update2/installers/ChromeSetup.exe" -OutFile $env:USERPROFILE\Downloads\ChromeSetup.exe
 		~/Downloads/ChromeSetup.exe -silent -install | Out-Null
 		
 		
-                Write-Host "Google Chrome processo concluído!"
+                Write-Host "Google Chrome Just Finished!"
             }
             No {
-                Write-Host "Pulando Google Chrome."
+                Write-Host "Skipping Google Chrome."
             }
 			}
 			
@@ -327,10 +352,10 @@ function Chrome {
 function AfterBurner {
 		do
 		{
-		$PromptBurner = [Windows.MessageBox]::Show($ABurner, "Discord", $Button, $Warn)
+		$PromptBurner = [Windows.MessageBox]::Show($ABurner, "MSI AfterBurner", $Button, $Warn)
 		Switch ($PromptBurner) {
         Yes {
-        Write-Host "Baixando e instalando MSI Afterburner..."
+        Write-Host "Downloading and installing MSI Afterburner..."
 				
 		$url = "https://ftp.nluug.nl/pub/games/PC/guru3d/afterburner/[Guru3D.com]-MSIAfterburner.zip"
         $output = "$env:USERPROFILE\Downloads\[Guru3D.com]-MSIAfterburner.zip"
@@ -341,13 +366,13 @@ $outpath = "$env:USERPROFILE\Downloads"
 $unziped = "$env:USERPROFILE\Downloads\MSIAfterburnerSetup462.exe"
 param([string]$zipfile, [string]$outpath)
 [System.IO.Compression.ZipFile]::ExtractToDirectory($zipfile, $outpath) | Out-File
-Write-Host "Instalando..."
+Write-Host "Installing..."
 Start-Process $unziped | Out-File	
 		
-                Write-Host "MSI Afterburner processo concluído!"
+                Write-Host "MSI Afterburner Just Finished!"
             }
             No {
-                Write-Host "Pulando MSI Afterburner."
+                Write-Host "Skipping MSI Afterburner."
             }
 			}
 			
@@ -364,14 +389,14 @@ do
         $Prompt10 = [Windows.MessageBox]::Show($Brave, "Brave Browser", $Button, $Warn)
         Switch ($Prompt10) {
             Yes {
-                Write-Host "Baixando e instalando Brave Browser..."
+                Write-Host "Downloading and installing Brave Browser..."
 				$ProgressPreference = 'SilentlyContinue'
                 Invoke-WebRequest -Uri "https://laptop-updates.brave.com/download/CHR253" -OutFile $env:USERPROFILE\Downloads\brave.exe
 		~/Downloads/brave.exe -silent -install | Out-Null
-                Write-Host "Brave Browser processo concluído!"
+                Write-Host "Brave Browser Just Finished!"
             }
             No {
-                Write-Host "Pulando Brave."
+                Write-Host "Skipping Brave."
             }
         }
 		}
@@ -385,14 +410,14 @@ function Controller {
 		$controller = [Windows.MessageBox]::Show($Controllerdriver, "Xbox 360 Controller Driver", $Button, $Warn)
 		Switch ($controller) {
             Yes {
-                Write-Host "Baixando e instalando Xbox 360 Controller Driver..."
+                Write-Host "Downloading and installing Xbox 360 Controller Driver..."
 				$ProgressPreference = 'SilentlyContinue'
                 Invoke-WebRequest -Uri "https://ucaf82aea84acc29507805d88a98.dl.dropboxusercontent.com/cd/0/get/BIsrEtwHJdUZymQA6enuF-ShZUeyuI8iWB2zJlO7-9Fpf0z1_hWgr_xF7OyUL8psmrbL6vDBcaqo6jmfbmujbkDkAiTsNfFJ25WM8MLJuGmz-cqS0clbIIbFPThsNfitICU/file?dl=1#" -OutFile $env:USERPROFILE\Downloads\Xbox360_64Eng.exe
 		~/Downloads/Xbox360_64Eng.exe -silent -install | Out-Null
-                Write-Host "Xbox 360 Controller Driver processo concluído!"
+                Write-Host "Xbox 360 Controller Driver Just Finished!"
             }
             No {
-                Write-Host "Pulando Xbox 360 Controller Driver."
+                Write-Host "Skipping Xbox 360 Controller Driver."
             }
 			}
 			
@@ -409,12 +434,12 @@ function Controller {
 		Switch ($PromptPPlan) {
             Yes {
                 
-  Write-Output "Habilitando Plano de Energia de Alta Performance"
+  Write-Output "High Performance Power Plan Enabled"
 	 powercfg -setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c
 	}
             
             No {
-			Write-Output "Habilitando Plano de Energia Balanceado"
+			Write-Output "Balanced Power Plan Enabled"
 	
 	powercfg -setactive 381b4222-f694-41f0-9685-ff5bb260df2e
             }
@@ -434,12 +459,12 @@ function Controller {
 		Switch ($PromptDarkMode) {
             Yes {
                 
-  Write-Output "Dark Mode Habilitado"
+  Write-Output "Dark Mode Enabled."
 	Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name AppsUseLightTheme -Value 0
 	}
             
             No {
-			Write-Output "Modo Claro Habilitado"
+			Write-Output "Light Mode Enabled."
 	Remove-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name AppsUseLightTheme
             }
 			}
@@ -459,7 +484,7 @@ function Controller {
                 Write-Host "Unloading the HKCR drive..."
                 Remove-PSDrive HKCR 
                 Start-Sleep 1
-                Write-Host "Iniciando reinicialização."
+                Write-Host "Initializing Reboot."
                 Stop-Transcript
                 Start-Sleep 2
                 Restart-Computer
@@ -468,7 +493,7 @@ function Controller {
                 Write-Host "Unloading the HKCR drive..."
                 Remove-PSDrive HKCR 
                 Start-Sleep 1
-                Write-Host "Script foi concluído. Saindo."
+                Write-Host "Script Just Finished. Quiting..."
                 Stop-Transcript
                 Start-Sleep 2
                 Exit
@@ -487,7 +512,7 @@ function Controller {
 				
 		function DeleteInstalledSoftwares
 		{
-		Write-Host "Removendo executáveis dos programas instalados..."	
+		Write-Host "Removing unnecessary .exe from installed Softwares..."	
 		Del $env:USERPROFILE\Downloads\readerdc_br_xa_crd_install.exe | Out-Null		
 		Del $env:USERPROFILE\Downloads\K-Lite_Codec_Pack_1595_Standard.exe | Out-Null
 		Del $env:USERPROFILE\Downloads\ChromeSetup.exe | Out-Null
@@ -498,7 +523,7 @@ function Controller {
 		Del $env:USERPROFILE\Downloads\hwmonitor_1.43.exe | Out-Null
 		Del $env:USERPROFILE\Downloads\Xbox360_64Eng.exe | Out-Null
 		
-		Write-Host "Executáveis removidos"	
+		Write-Host "Removed."	
 		}			
 		
 		
@@ -1249,7 +1274,7 @@ $DOneDrive = [Windows.MessageBox]::Show($NoOneDrive, "OneDrive", $Button, $Warn)
 	}
 
 No{
-Write-Output "Pulando OneDrive Uninstall..."
+Write-Output "Skipping OneDrive Uninstall..."
 }
 }
 }
@@ -1328,7 +1353,7 @@ $PromptPhoto = [Windows.MessageBox]::Show($PhotoViewer, "Photo Viewer", $Button,
 	}
 	
    No {
-                Write-Host "Pulando Photo Viwer."
+                Write-Host "Skipping Photo Viwer."
             }
 			}			
 			}						        
@@ -1365,7 +1390,7 @@ $PromptUnpinStart = [Windows.MessageBox]::Show($UnpinStart, "Unpin Start", $Butt
 	}
 }
 No {
-                Write-Host "Pulando Unpin Start..."
+                Write-Host "Skipping Unpin Start..."
             }
         }
 		}
@@ -1383,7 +1408,7 @@ $PromptUnpinTaskBar = [Windows.MessageBox]::Show($UnpinTaskBar, "Unpin TaskBar",
 	Remove-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Taskband" -Name "FavoritesResolve" -ErrorAction SilentlyContinue
 }
 No {
-                Write-Host "Pulando Unpin TaskBar..."
+                Write-Host "Skipping Unpin TaskBar..."
             }
         }
 		}
