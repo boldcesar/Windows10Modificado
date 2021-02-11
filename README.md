@@ -6,4 +6,4 @@ Fontes: -https://github.com/Sycnex/Windows10Debloater- -https://github.com/Chris
 Eu utilizei como base os scripts tanto do Chris Titu Techs quanto do Sycnex (links acima)
 Modifiquei o script com base no meu uso pessoal, mas quem quiser utilizá-lo, sugerir alguma coisa ou tiver alguma crítica, fica a vontade.
 Os créditos são a esses dois usuários do GitHub descritos ###
-Readme.txt contém todas as modificações no windows pelos scripts versão básica e avançada.
+Readme.txt contém todas as modificações no windows pelo script.
