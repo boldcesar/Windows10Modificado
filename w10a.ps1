@@ -6,7 +6,7 @@
 
 
 ####     Command to run the script direct from github repository ####
-####     > powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('https://git.io/JJ8R4')"
+####     > powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('https://git.io/Jtojy')"
 
 
 ###Starting script.
