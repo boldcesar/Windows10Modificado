@@ -148,8 +148,8 @@ $tweaks = @(
 	"DeleteInstalledSoftwares",
 	"SetPhotoViewerAssociation",	
 	
-	"UnpinStartMenuTiles",
-	"UnpinTaskbarIcons",
+	#"UnpinStartMenuTiles",
+	#"UnpinTaskbarIcons",
 	
 	"RebootPC"	
 	
