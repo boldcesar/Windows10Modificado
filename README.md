@@ -23,8 +23,6 @@ Minhas adições:
 -Instalar Driver de Controle XBOX 360.
 -Habilitar Modo Escuto (Dark Mode).
 -Mudar para o modo de visualização de imagens clássico.
--Remover ícones da Barra de Tarefas.
--Remover blocos do Menu Iniciar.
 
 #2 Baixa o Windows Update Blocker.
 
