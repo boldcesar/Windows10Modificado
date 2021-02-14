@@ -1,4 +1,4 @@
-# Windows 10 Debloater Script + Essential Softwares
+# Windows 10 + limpo com Aplicativos essenciais.
 
 
 Fontes: -https://github.com/Sycnex/Windows10Debloater- -https://github.com/ChrisTitusTech/win10script-.
@@ -12,17 +12,13 @@ Readme.txt contém todas as modificações no windows pelo script.
 Minhas adições:
 #1 Caixa de diálogo perguntando se quer "Sim" ou "Não"
 -Desinstalar OneDrive.
--Instalar .Net FrameWork 3.5.
 -Instalar Acrobat Reader.
 -Instalar K-lite Codec Pack.
 -Instalar Navegador Brave.
 -Instalar Navegador Google Chrome.
--Instalar HWMonitor.
--Instalar MSI AfterBurner.
 -Habilitar Plano de Energia de Alta Performance.
 -Instalar Driver de Controle XBOX 360.
 -Habilitar Modo Escuto (Dark Mode).
--Habilitar Modo de exibição de fotos clássico.
 
 #2 Baixa o Windows Update Blocker.
 
