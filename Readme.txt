@@ -13,7 +13,7 @@
 ####		Um comando para rodar o script direto do repositório do Github ####
 
 
-####     > powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('https://git.io/Jtojy')"
+####     > powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('https://git.io/JtPgP')"
 
 Este script tem como função limpar o windows, removendo todos os Apps que vêm pré-instalados, assim como
 modificar opções de privacidade, aplicativos, interface e segurança. Deixando o Windows 10 muito mais leve e limpo.
