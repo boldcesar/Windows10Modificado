@@ -146,7 +146,7 @@ $tweaks = @(
 	"ShutUpantispyUpdateBlocker",	
 	"InstallPDFPrinter",
 	"DeleteInstalledSoftwares",
-	#"SetPhotoViewerAssociation",	
+	"SetPhotoViewerAssociation",	
 	
 	#"UnpinStartMenuTiles",
 	#"UnpinTaskbarIcons",
