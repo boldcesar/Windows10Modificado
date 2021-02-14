@@ -415,7 +415,7 @@ function Controller {
             Yes {
                 Write-Host "Downloading and installing Xbox 360 Controller Driver..."
 				$ProgressPreference = 'SilentlyContinue'
-                Invoke-WebRequest -Uri "https://ucaf82aea84acc29507805d88a98.dl.dropboxusercontent.com/cd/0/get/BIsrEtwHJdUZymQA6enuF-ShZUeyuI8iWB2zJlO7-9Fpf0z1_hWgr_xF7OyUL8psmrbL6vDBcaqo6jmfbmujbkDkAiTsNfFJ25WM8MLJuGmz-cqS0clbIIbFPThsNfitICU/file?dl=1#" -OutFile $env:USERPROFILE\Downloads\Xbox360_64Eng.exe
+                Invoke-WebRequest -Uri "https://uc03feb60f3fe5ee785c0724f70d.dl.dropboxusercontent.com/cd/0/get/BI8OrFhzrMiUpekohaQNqltK2rUaZ21FXv_y71oyNfqqi-ziHHIE4ucxX0-wBi8MzQ336QawXRP7HR5Nmttf-9MqlPJ8wentNKQL8SUuECDlFvl9_cdF3XLuzXqHkGPBaJo/file?dl=1#" -OutFile $env:USERPROFILE\Downloads\Xbox360_64Eng.exe
 		~/Downloads/Xbox360_64Eng.exe -silent -install | Out-Null
                 Write-Host "Xbox 360 Controller Driver Just Finished!"
             }
