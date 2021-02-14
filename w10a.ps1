@@ -64,9 +64,9 @@ $tweaks = @(
 	"SetUnknownNetworksPrivate",  
 	"DisableNetDevicesAutoInst",  
 	"DisableCtrldFolderAccess",
-	"EnableFirewall",
-	"EnableDefender",
-	"EnableDefenderCloud",
+	#"EnableFirewall",
+	#"EnableDefender",
+	#"EnableDefenderCloud",
 	"EnableF8BootMenu",             
 	"DisableMeltdownCompatFlag", 
 
