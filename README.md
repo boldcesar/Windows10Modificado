@@ -8,6 +8,13 @@ Modifiquei o script com base no meu uso pessoal, mas quem quiser utilizá-lo, su
 Os créditos são a esses dois usuários do GitHub descritos ###
 Readme.txt contém todas as modificações no windows pelo script.
 
+Comando para executar direto pelo powershell, sem necessidade de baixar o arquivo ps1:
+
+Powershell como administrador e executando primeiro o comando. 
+> set-executionpolicy unrestricted
+
+Depois.
+> powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('https://git.io/JtPgP')"
 
 Minhas adições:
 #1 Caixa de diálogo perguntando se quer "Sim" ou "Não"
