@@ -145,9 +145,6 @@ para a instalação dos softwares instalados.
 	"SetUnknownNetworksPrivate",  
 	"DisableNetDevicesAutoInst",  
 	"DisableCtrldFolderAccess",
-	"EnableFirewall",
-	"EnableDefender",
-	"EnableDefenderCloud",
 	"EnableF8BootMenu",             
 	"DisableMeltdownCompatFlag", 
 
