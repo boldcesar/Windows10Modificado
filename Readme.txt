@@ -38,7 +38,6 @@ Em razão do script modificar várias configurações do windows, então se o us
 -Habilitar Plano de Energia de Alta Performance.
 -Instalar Driver de Controle XBOX 360.
 -Habilitar Modo Escuto (Dark Mode).
--Mudar para o modo de visualização de imagens clássico.
 
 
 #2 Baixa o Windows Update Blocker.
