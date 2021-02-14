@@ -106,8 +106,9 @@ $tweaks = @(
 	"DisableNewAppPrompt",    
 	"EnableNumlock",             
 	"Stop-EdgePDF",
+	"HideMeetNow",
 
-	### Explorer UI Tweaks ###
+	### Explorer ###
 	"ShowKnownExtensions",          
 	"ShowHiddenFiles",
 	"HideSyncNotifications"        
@@ -1140,6 +1141,13 @@ Function EnableNumlock {
 		$wsh.SendKeys('{NUMLOCK}')
 	}
 }
+
+# Removes Meet Now feature
+Function HideMeetNow {
+	Write-Output "Removing Meet Now..."
+	Set-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" -Name "HideSCAMeetNow" -Type DWord -Value 1
+	Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" -Name "HideSCAMeetNow" -Type DWord -Value 1
+	}
 
 ##########
 # Explorer UI Tweaks
