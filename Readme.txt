@@ -25,20 +25,16 @@ Em razão do script modificar várias configurações do windows, então se o us
 
 #### O script executa uma série de prompts perguntando se o usário deseja instalar ou habilitar alguns programas e funções, então é sugerido que o usuário rode o script com calma para não instalar, desinstalar ou desabilitar alguma coisa que não seja de sua preferência!!!!
 	
-	Minhas adições:
+Minhas adições:
 #1 Caixa de diálogo perguntando se quer "Sim" ou "Não"
 -Desinstalar OneDrive.
--Instalar .Net FrameWork 3.5.
 -Instalar Acrobat Reader.
 -Instalar K-lite Codec Pack.
 -Instalar Navegador Brave.
 -Instalar Navegador Google Chrome.
--Instalar HWMonitor.
--Instalar MSI AfterBurner.
 -Habilitar Plano de Energia de Alta Performance.
 -Instalar Driver de Controle XBOX 360.
 -Habilitar Modo Escuto (Dark Mode).
--Habilitar Modo de exibição de fotos clássico.
 
 
 #2 Baixa o Windows Update Blocker.
