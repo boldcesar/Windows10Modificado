@@ -108,7 +108,7 @@ $tweaks = @(
 
 	### Explorer UI Tweaks ###
 	"ShowKnownExtensions",          
-	"HideHiddenFiles",
+	"ShowHiddenFiles",
 	"HideSyncNotifications"        
 	"HideRecentShortcuts",        
 	"SetExplorerThisPC",          
@@ -1153,12 +1153,6 @@ Function ShowKnownExtensions {
 Function ShowHiddenFiles {
 	Write-Output "Showing hidden files..."
 	Set-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "Hidden" -Type DWord -Value 1
-}
-
-# Hide hidden files
-Function HideHiddenFiles {
-	Write-Output "Hiding hidden files..."
-	Set-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "Hidden" -Type DWord -Value 2
 }
 
 # Hide sync provider notifications
